@@ -1,5 +1,5 @@
 # Comic-Layaway
-This is a Flask-based backend for Layaway Comics. It uses MongoDB as the database and is contained within a Docker container for ease of deployment.
+This is a Flask-based backend for Layaway Comics. It is contained within a Docker container for ease of deployment.
 
 ## Getting Started
 These instructions will help you get a copy of the project up and running on your local machine for development and testing purposes.
@@ -14,12 +14,12 @@ Before you begin, you will need to have the following software installed on your
 ## Installing
 1. Clone this repository:
 ```bash
-git clone https://github.com/guillermoreyesv/User-Management.git
+git clone https://github.com/guillermoreyesv/Comic-Layaway.git
 ```
 
 2. Navigate to the repository directory:
 ```bash
-cd User-Management
+cd Comic-Layaway
 ```
 
 3. Copy the .env.example file to .env:
@@ -36,15 +36,15 @@ docker network create --subnet=172.18.0.0/16 marvel-network
 
 6. Build the Docker container:
 ```bash
-docker build -t user-managment .
+docker build -t comics-layaway .
 ```
 
 7. Run the container:
 ```bash
-docker run -d -p 8001:8001 --network marvel-network --ip 172.18.0.11 --name user-container user-managment
+docker run -d -p 8002:8002 --network marvel-network --ip 172.18.0.12 --name layaway-container comics-layaway
 ```
 
-8. Your Marvel-backend should now be up and running in http://127.0.0.1:8001!
+8. Your Comic-Layaway should now be up and running in http://127.0.0.1:8002!
 
 ### In local
 
@@ -68,7 +68,7 @@ pip install --no-cache-dir -r requirements.txt
 python run.py
 ```
 
-9. Your Marvel-backend should now be up and running in http://127.0.0.1:5000!
+9. Your Comic-Layaway should now be up and running in http://127.0.0.1:5000!
 
 ## Deployment
 To deploy this application to a production environment, you will need to follow the steps above, making any necessary modifications to match your environment.
